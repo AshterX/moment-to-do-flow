@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,22 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				// Category colors for the calendar
+				category: {
+					exercise: '#FF5733', // Red-orange for exercise
+					eating: '#33FF57',   // Green for eating
+					work: '#3357FF',     // Blue for work
+					relax: '#57FF33',    // Light green for relax
+					family: '#FF33F5',   // Pink for family
+					social: '#33FFF5'    // Cyan for social
+				},
+				// Goal colors
+				goal: {
+					fit: '#FF9F33',      // Orange for be fit
+					academics: '#9F33FF', // Purple for academics
+					learn: '#33A3FF',    // Light blue for learn
+					sports: '#33FFB5'    // Turquoise for sports
 				}
 			},
 			borderRadius: {
