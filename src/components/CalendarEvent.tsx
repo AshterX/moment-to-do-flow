@@ -9,9 +9,10 @@ import { format, parseISO, differenceInMinutes } from 'date-fns';
 interface CalendarEventProps {
   event: Event;
   columnWidth: number;
+  style?: React.CSSProperties; // Add style prop to interface
 }
 
-const CalendarEvent = ({ event, columnWidth }: CalendarEventProps) => {
+const CalendarEvent = ({ event, columnWidth, style }: CalendarEventProps) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const dispatch = useAppDispatch();
   
@@ -65,6 +66,7 @@ const CalendarEvent = ({ event, columnWidth }: CalendarEventProps) => {
         height: `${height}px`,
         width: `${columnWidth - 8}px`,
         opacity,
+        ...style, // Apply the optional style prop
       }}
       onClick={handleEventClick}
     >
